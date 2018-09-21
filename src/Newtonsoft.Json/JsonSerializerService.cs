@@ -1,11 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json;
-using System.IO;
+using System;
 using System.Collections;
-using System.Runtime.Serialization.Formatters;
-using System.Runtime.Serialization;
 using System.Globalization;
+using System.IO;
+using System.Runtime.Serialization;
 
 namespace Jering.IocServices.Newtonsoft.Json
 {
@@ -31,19 +30,6 @@ namespace Jering.IocServices.Newtonsoft.Json
             set
             {
                 _jsonSerializer.ReferenceResolver = value;
-            }
-        }
-
-        public SerializationBinder Binder
-        {
-            get
-            {
-                return _jsonSerializer.Binder;
-            }
-
-            set
-            {
-                _jsonSerializer.Binder = value;
             }
         }
 
@@ -96,19 +82,6 @@ namespace Jering.IocServices.Newtonsoft.Json
             set
             {
                 _jsonSerializer.TypeNameHandling = value;
-            }
-        }
-
-        public FormatterAssemblyStyle TypeNameAssemblyFormat
-        {
-            get
-            {
-                return _jsonSerializer.TypeNameAssemblyFormat;
-            }
-
-            set
-            {
-                _jsonSerializer.TypeNameAssemblyFormat = value;
             }
         }
 

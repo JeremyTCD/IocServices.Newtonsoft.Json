@@ -1,23 +1,20 @@
-﻿using System;
+﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json;
-using System.IO;
+using System;
 using System.Collections;
-using System.Runtime.Serialization.Formatters;
-using System.Runtime.Serialization;
 using System.Globalization;
+using System.IO;
+using System.Runtime.Serialization;
 
 namespace Jering.IocServices.Newtonsoft.Json
 {
     public interface IJsonSerializerService
     {
         IReferenceResolver ReferenceResolver { get; set; }
-        SerializationBinder Binder { get; set; }
         ISerializationBinder SerializationBinder { get; set; }
         ITraceWriter TraceWriter { get; set; }
         IEqualityComparer EqualityComparer { get; set; }
         TypeNameHandling TypeNameHandling { get; set; }
-        FormatterAssemblyStyle TypeNameAssemblyFormat { get; set; }
         TypeNameAssemblyFormatHandling TypeNameAssemblyFormatHandling { get; set; }
         PreserveReferencesHandling PreserveReferencesHandling { get; set; }
         ReferenceLoopHandling ReferenceLoopHandling { get; set; }
@@ -37,25 +34,25 @@ namespace Jering.IocServices.Newtonsoft.Json
         FloatParseHandling FloatParseHandling { get; set; }
         FloatFormatHandling FloatFormatHandling { get; set; }
         StringEscapeHandling StringEscapeHandling { get; set; }
-        String DateFormatString { get; set; }
+        string DateFormatString { get; set; }
         CultureInfo Culture { get; set; }
-        Nullable<Int32> MaxDepth { get; set; }
-        Boolean CheckAdditionalContent { get; set; }
+        int? MaxDepth { get; set; }
+        bool CheckAdditionalContent { get; set; }
 
         JsonSerializer Create();
         JsonSerializer Create(JsonSerializerSettings settings);
         JsonSerializer CreateDefault();
         JsonSerializer CreateDefault(JsonSerializerSettings settings);
-        void Populate(TextReader reader, Object target);
-        void Populate(JsonReader reader, Object target);
-        Object Deserialize(JsonReader reader);
-        Object Deserialize(TextReader reader, Type objectType);
+        void Populate(TextReader reader, object target);
+        void Populate(JsonReader reader, object target);
+        object Deserialize(JsonReader reader);
+        object Deserialize(TextReader reader, Type objectType);
         T Deserialize<T>(JsonReader reader);
-        Object Deserialize(JsonReader reader, Type objectType);
-        void Serialize(TextWriter textWriter, Object value);
-        void Serialize(JsonWriter jsonWriter, Object value, Type objectType);
-        void Serialize(TextWriter textWriter, Object value, Type objectType);
-        void Serialize(JsonWriter jsonWriter, Object value);
+        object Deserialize(JsonReader reader, Type objectType);
+        void Serialize(TextWriter textWriter, object value);
+        void Serialize(JsonWriter jsonWriter, object value, Type objectType);
+        void Serialize(TextWriter textWriter, object value, Type objectType);
+        void Serialize(JsonWriter jsonWriter, object value);
 
         event EventHandler<ErrorEventArgs> Error;
     }
