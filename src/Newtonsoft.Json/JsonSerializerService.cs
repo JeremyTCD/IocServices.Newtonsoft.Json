@@ -5,6 +5,7 @@ using System.Collections;
 using System.Globalization;
 using System.IO;
 using System.Runtime.Serialization;
+using ErrorEventArgs = Newtonsoft.Json.Serialization.ErrorEventArgs;
 
 namespace Jering.IocServices.Newtonsoft.Json
 {
