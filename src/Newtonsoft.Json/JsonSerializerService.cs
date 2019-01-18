@@ -15,7 +15,8 @@ namespace Jering.IocServices.Newtonsoft.Json
 
         public JsonSerializerService()
         {
-            _jsonSerializer = new JsonSerializer();
+            // Default values may be ignored if JsonSerializer.DefaultValueHandling isn't Populate - https://github.com/JamesNK/Newtonsoft.Json/issues/1961
+            _jsonSerializer = new JsonSerializer() { DefaultValueHandling = DefaultValueHandling.Populate };
             _jsonSerializer.Error += (object sender, ErrorEventArgs e) => Error?.Invoke(sender, e);
         }
 
