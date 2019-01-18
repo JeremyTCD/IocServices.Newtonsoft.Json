@@ -1,11 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFrameworks>netstandard1.3;netstandard2.0</TargetFrameworks>
+        <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
         <PackageId>Jering.IocServices.Newtonsoft.Json</PackageId>
         <Authors>JeremyTCD</Authors>
         <Description>Inversion of Control Services for Types in the Newtonsoft.Json Namespace.</Description>
-        <Copyright>© JeremyTCD. All rights reserved.</Copyright>
+        <Copyright>© Jering. All rights reserved.</Copyright>
         <PackageProjectUrl>https://github.com/JeremyTCD/IocServices.Newtonsoft.Json</PackageProjectUrl>
         <PackageLicenseUrl>$(PackageProjectUrl)/blob/master/License.txt</PackageLicenseUrl>
         <RepositoryUrl>$(PackageProjectUrl)</RepositoryUrl>
