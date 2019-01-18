@@ -11,8 +11,6 @@
         <RepositoryUrl>$(PackageProjectUrl)</RepositoryUrl>
         <PackageTags></PackageTags>
         <RepositoryType>git</RepositoryType>
-        <IncludeSymbols>true</IncludeSymbols>
-        <Version>0.2.0</Version>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
     </PropertyGroup>
 
