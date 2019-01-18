@@ -1,0 +1,16 @@
+trigger:
+- master
+
+resources:
+  repositories:
+  - repository: templates
+    type: github
+    name: JeringTech/DevOps.AzurePipelines
+    endpoint: JeringTech
+
+jobs:
+- template: templates/nuget/main.yml@templates
+  parameters:
+    nugetUnreleasedPrereleasePushEndpoint: "https://www.myget.org/F/jering/api/v3/index.json"
+    runInheritDoc: false
+    runTests: false

@@ -1,10 +1,6 @@
-Copyright (c) 2018 JeremyTCD
+# Licenses
+Jering.IocServices.Newtonsoft.Json, copyright © 2018-2019 Jering. All rights reserved.
 
-All rights reserved.
-
-This project is licensed under the following license:
-
-Apache License
 Version 2.0, January 2004
 http://www.apache.org/licenses/
 

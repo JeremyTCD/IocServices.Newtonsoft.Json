@@ -8,10 +8,6 @@
 [Target Frameworks](#target-frameworks)  
 [Installation](#installation)  
 [Usage](#usage)  
-[Building](#building)  
-[Related Projects](#related-projects)  
-[Contributing](#contributing)  
-[About](#about)  
 
 ## Overview
 This is a generated library that provides inversion of control services for types in the `Newtonsoft.Json` namespace. **This library and its generator are both incomplete and under construction.**
@@ -36,16 +32,3 @@ services.AddSingleton<IJsonSerializerService, JsonSerializerService>();
 ServiceProvider serviceProvider = services.BuildServiceProvider();
 IJsonSerializerService jsonSerializerService = serviceProvider.GetRequiredService<IJsonSerializerService>();
 ```
-
-## Building
-This project can be built using Visual Studio 2017.
-
-## Related Projects
-#### Projects Using this Library
-[Jering.Markdig.Extensions.FlexiBlocks](https://github.com/JeremyTCD/Markdig.Extensions.FlexiBlocks) - A Collection of Flexible Markdig Extensions.
-
-## Contributing
-Contributions are welcome!  
-
-## About
-Follow [@JeremyTCD](https://twitter.com/JeremyTCD) for updates and more.
